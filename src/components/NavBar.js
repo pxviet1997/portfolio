@@ -1,4 +1,5 @@
-import { AppBar, Grid, Typography } from "@mui/material";
+import { AppBar, Button, Grid, Typography } from "@mui/material";
+import { Box } from "@mui/system";
 import { Link } from "react-router-dom";
 
 const NavBar = () => {
@@ -21,30 +22,40 @@ const NavBar = () => {
           >
             <Grid item lg={3} md={3} xs={3}>
               {/* <Link to="/home"> */}
-              <Typography sx={{ color: 'white', fontFamily: 'Menlo' }}>
-                Home
-              </Typography>
+              <Box>
+                <Button component={Link} to="/home">
+                  <Typography sx={{ color: 'white', fontFamily: 'Menlo' }}>
+                    Home
+                  </Typography>
+                </Button>
+              </Box>
               {/* </Link> */}
             </Grid>
             <Grid item lg={3} md={3} xs={3}>
               {/* <Link to="/about">  */}
-              <Typography sx={{ color: 'white', fontFamily: 'Menlo' }}>
-                About
-              </Typography>
+              <Button component={Link} to="/about">
+                <Typography sx={{ color: 'white', fontFamily: 'Menlo' }}>
+                  About
+                </Typography>
+              </Button>
               {/* </Link> */}
             </Grid>
             <Grid item lg={3} md={3} xs={3}>
               {/* <Link to="/projects"> */}
-              <Typography sx={{ color: 'white', fontFamily: 'Menlo' }}>
-                Projects
-              </Typography>
+              <Button component={Link} to="/projects">
+                <Typography sx={{ color: 'white', fontFamily: 'Menlo' }}>
+                  Projects
+                </Typography>
+              </Button>
               {/* </Link> */}
             </Grid>
             <Grid item lg={3} md={3} xs={3}>
               {/* <Link to="/contacts">  */}
-              <Typography sx={{ color: 'white', fontFamily: 'Menlo' }}>
-                Contacts
-              </Typography>
+              <Button component={Link} to="/contacts">
+                <Typography sx={{ color: 'white', fontFamily: 'Menlo' }}>
+                  Contacts
+                </Typography>
+              </Button>
               {/* </Link> */}
             </Grid>
           </Grid>
