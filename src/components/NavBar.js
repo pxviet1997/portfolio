@@ -16,7 +16,6 @@ const NavBar = () => {
             spacing={3}
             alignItems="center"
             sx={{
-              // backgroundColor: 'red',
               paddingX: 2
             }}
           >
