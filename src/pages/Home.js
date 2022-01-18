@@ -28,6 +28,7 @@ const Home = () => {
         justifyContent="center"
         alignItems="center"
         minHeight="80vh"
+      // backgroundColor="red"
       >
         <ThemeProvider theme={theme}>
           <Typography variant="h1">
