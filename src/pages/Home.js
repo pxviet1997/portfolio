@@ -13,14 +13,12 @@ const Home = () => {
   let theme = createTheme({
     typography: {
       h1: {
-        fontSize: 40,
+        fontSize: 45,
         fontFamily: ['Courier Prime', 'monospace'].join(','),
       }
     }
   });
-  // let theme = createTheme();
   theme = responsiveFontSizes(theme);
-  // theme = responsiveFontSizes
 
   return (
     <div>
