@@ -15,6 +15,7 @@ const Home = () => {
       h1: {
         fontSize: 45,
         fontFamily: ['Courier Prime', 'monospace'].join(','),
+        textShadow: "0px 4px 4px #bcbcbc"
       }
     }
   });
@@ -28,7 +29,6 @@ const Home = () => {
         justifyContent="center"
         alignItems="center"
         minHeight="80vh"
-      // backgroundColor="red"
       >
         <ThemeProvider theme={theme}>
           <Typography variant="h1">
