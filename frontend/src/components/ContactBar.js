@@ -1,7 +1,12 @@
 import { Box, Grid } from "@mui/material";
+import { useState } from "react";
+import { Link } from "react-router-dom";
 import { SocialIcon } from "react-social-icons";
+import ContactFormModal from "./ContactFormModal";
 
 const ContactBar = () => {
+  const [open, setOpen] = useState(false);
+
   return (
     <div>
       <Grid
@@ -27,11 +32,11 @@ const ContactBar = () => {
           <SocialIcon
             network="email"
             style={{ height: 50, width: 50 }}
+            onClick={() => setOpen(true)}
           />
         </Grid>
-        {/* <a href="https://linkedin.com/in/viet-pham-b745a0184/" target="_blank" rel="noreferrer">LinkedIn</a>
-        <a href="https://github.com/pxviet1997" target="_blank" rel="noreferrer">Github</a> */}
       </Grid>
+      <ContactFormModal open={open} setOpen={setOpen} />
     </div>
   );
 }
