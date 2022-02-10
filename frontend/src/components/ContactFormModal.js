@@ -9,6 +9,7 @@ import {
   Typography
 } from "@mui/material";
 import { Formik } from 'formik';
+import { reqSendEmail } from '../api';
 
 const style = {
   position: 'absolute',
@@ -45,6 +46,7 @@ const ContactFormModal = ({ open, setOpen, }) => {
           initialValues={initialValues}
           onSubmit={async (values) => {
             console.log(values);
+            await reqSendEmail(values);
           }}
         >
           {({
