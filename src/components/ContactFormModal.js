@@ -10,6 +10,7 @@ import {
 } from "@mui/material";
 import { Formik } from 'formik';
 import { reqSendEmail } from '../api';
+import emailjs from 'emailjs-com';
 
 const style = {
   position: 'absolute',
@@ -34,6 +35,10 @@ const ContactFormModal = ({ open, setOpen, }) => {
     setOpen(false);
   };
 
+  const SERVICE_ID = 'service_rvlr3q5';
+  const TEMPLATE_ID = 'template_f8n65j3';
+  const USER_ID = 'user_VmyNvlu1URIMajsCDd1hB';
+
   return (
     <Modal
       open={open}
@@ -45,8 +50,14 @@ const ContactFormModal = ({ open, setOpen, }) => {
         <Formik
           initialValues={initialValues}
           onSubmit={async (values) => {
-            console.log(values);
-            await reqSendEmail(values);
+            // console.log(values);
+            // await reqSendEmail(values);
+            try {
+              const result = await emailjs.send(SERVICE_ID, TEMPLATE_ID, values, USER_ID);
+              console.log(result);
+            } catch (error) {
+              console.log(error);
+            }
           }}
         >
           {({
